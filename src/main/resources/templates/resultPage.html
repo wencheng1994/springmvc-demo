@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/default">
+<head lang="en">
+	<meta charset="UTF-8"/>
+	<title>Hello thymeleaf</title>
+</head>
+<body>
+<div class="row" layout:fragment="content">
+	<h2 class="indigo-text center" th:text="|tweet results for ${search}|">Tweet</h2>
+
+	<ul class="collection">
+		<li th:each="tweet : ${tweets}" class="collection-item avatar">
+			<!--<img th:src="${tweet.user.profileImageUrl}" alt="img" class="circle"/>-->
+			<!--<span th:text="${tweet.user.name}" class="title"></span>-->
+			<p th:text="${tweet.text}"></p>
+		</li>
+	</ul>
+</div>
+</body>
+</html>
