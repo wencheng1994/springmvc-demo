@@ -11,7 +11,7 @@ import javax.validation.Valid;
 public class ProfileController {
 
     @RequestMapping("/profile")
-    public String dispalyProfile() {
+    public String dispalyProfile(ProfileForm profileForm) {
         return "profile/profilePage";
     }
 
