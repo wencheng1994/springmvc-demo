@@ -1,4 +1,4 @@
-package tech.st.springdemo;
+package tech.st.springmvc.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

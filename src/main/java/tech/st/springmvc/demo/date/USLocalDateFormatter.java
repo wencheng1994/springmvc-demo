@@ -1,4 +1,4 @@
-package tech.st.springdemo.date;
+package tech.st.springmvc.demo.date;
 
 import org.springframework.format.Formatter;
 

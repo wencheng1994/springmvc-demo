@@ -1,18 +1,11 @@
-package tech.st.springdemo.controller;
+package tech.st.springmvc.demo.controller;
 
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
- * DTO match form data and do validation
- * <p>
- * javax.validation.constraints
- * </p>
- * <p>
- * org.hibernate.validator.constraints
- * </p>
+ * DTO: match form data and do validation
  */
 public class ProfileForm {
 
@@ -23,7 +16,7 @@ public class ProfileForm {
     private String lastName;
 
 
-    @Size(min = 8, max=16)
+    @Size(min = 8, max = 16)
     private String password;
 
     @NotNull

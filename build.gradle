@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.10.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '1.5.10.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -20,37 +20,20 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-//    maven { url "http://maven.oschina.net/content/groups/public/" }
-	mavenCentral()
+    mavenCentral()
 }
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	compile "org.springframework.social:spring-social-twitter:1.1.0.RELEASE"
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile "org.springframework.social:spring-social-twitter:1.1.0.RELEASE"
 
-	// material design, using webjars
+    // material design, using webjars
     compile 'org.webjars:materializecss:0.96.0'
     compile 'org.webjars:jquery:2.1.4'
 
-
     compile 'org.springframework.boot:spring-boot-devtools'
 
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
-
-//allprojects {
-//	apply plugin: 'idea'
-//	idea {
-//		module {
-//			outputDir file('build/classes/main')
-//			testOutputDir file('build/classes/test')
-//		}
-//	}
-//	if(project.convention.findPlugin(JavaPluginConvention)) {
-//		// Change the output directory for the main and test source sets back to the old path
-//		sourceSets.main.output.classesDir = new File(buildDir, "classes/main")
-//		sourceSets.test.output.classesDir = new File(buildDir, "classes/test")
-//	}
-//}

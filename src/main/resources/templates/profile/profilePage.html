@@ -9,11 +9,8 @@
 <body>
 
 <div layout:fragment="content">
-    <form th:action="@{/profile}" method="post" class="col m8 s12 offset-m2" th:object="${profileForm}">
 
-        <ul th:if="${#fields.hasErrors('*')}" class="errorlist">
-            <li th:each="err : ${#fields.errors('*')}" th:text="${err}">Input is incorrect</li>
-        </ul>
+    <form th:action="@{/profile}" method="post" class="col m8 s12 offset-m2" th:object="${profileForm}">
 
         <div class="row">
             <div class="input-field col s6">
@@ -22,6 +19,7 @@
                 <label for="first_name">First Name</label>
                 <div class="red-text">Error</div>
             </div>
+
             <div class="input-field col s6">
                 <input id="last_name" type="text" class="validate" th:field="${profileForm.lastName}"
                        th:errorclass="invalid"/>
@@ -30,23 +28,7 @@
 
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input value="I am not editable" id="disabled" type="text" class="validate" th:errorclass="invalid"/>
-                <label for="disabled">Disabled</label>
-                <div class="red-text">Error</div>
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password" type="password" class="validate" th:field="${profileForm.password}"
-                       th:errorclass="invalid"/>
-                <label for="password">Password</label>
-                <div class="red-text">Error</div>
-
-            </div>
-        </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="email" type="email" class="validate" th:field="${profileForm.email}"
@@ -54,17 +36,6 @@
                 <label for="email">Email</label>
                 <div th:errors="*{twitterHandle}" class="red-text">Error</div>
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                This is an inline input field:
-                <div class="input-field inline">
-                    <input id="email" type="email" class="validate" th:errorclass="invalid"/>
-                    <label for="email" data-error="wrong" data-success="right">Email</label>
-                    <div th:errors="*{email}" class="red-text">Error</div>
-
-                </div>
             </div>
         </div>
 

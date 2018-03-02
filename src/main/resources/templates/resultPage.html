@@ -10,8 +10,8 @@
 
 	<ul class="collection">
 		<li th:each="tweet : ${tweets}" class="collection-item avatar">
-			<!--<img th:src="${tweet.user.profileImageUrl}" alt="img" class="circle"/>-->
-			<!--<span th:text="${tweet.user.name}" class="title"></span>-->
+			<img th:src="${tweet.user.profileImageUrl}" alt="img" class="circle"/>
+			<span th:text="${tweet.user.name}" class="title"></span>
 			<p th:text="${tweet.text}"></p>
 		</li>
 	</ul>

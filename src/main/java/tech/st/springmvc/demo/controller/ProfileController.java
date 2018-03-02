@@ -1,4 +1,4 @@
-package tech.st.springdemo.controller;
+package tech.st.springmvc.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -11,13 +11,12 @@ import javax.validation.Valid;
 public class ProfileController {
 
     @RequestMapping("/profile")
-    public String dispalyProfile(ProfileForm proFileForm) {
+    public String dispalyProfile() {
         return "profile/profilePage";
     }
 
     @RequestMapping(value = "/profile", method = RequestMethod.POST)
     public String saveProfile(@Valid ProfileForm profileForm, BindingResult bindingResult) {
-
         if (bindingResult.hasErrors()) {
             return "profile/profilePage";
         }
